@@ -12,7 +12,7 @@ A machine learning classification project that predicts **wine quality (low vs h
 - Combines both datasets and adds **`wine_type`** dummy variable (0 = white, 1 = red) :contentReference[oaicite:1]{index=1}  
 - Converts original quality score into a **binary target**:
   - **Low quality:** 0–5  
-  - **High quality:** 6–10 :contentReference[oaicite:2]{index=2}
+  - **High quality:** 6–10 
 - Train/test split: **70% train / 30% test**
 - Metrics: **Accuracy, F1 Score, AUC** (accounts for baseline/no-information rate) :contentReference[oaicite:3]{index=3}
 
@@ -46,48 +46,58 @@ A machine learning classification project that predicts **wine quality (low vs h
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/wine-quality-classification.git
-   cd wine-quality-classification
-
-2. Create a project-specific library
-   ```bash
-   install.packages("renv")
-   renv::init()
-   renv::activate()
-
-3. Install dependencies
-   ```bash
-   install.packages(c(
-  "MASS",
-  "pROC",
-  "caret",
-  "ROCR",
-  "rpart",
-  "rpart.plot",
-  "randomForest",
-  "gbm",
-  "nnet",
-  "class",
-  "e1071"
-))
+  1. Clone the repository:
+     ```bash
+     git clone https://github.com/yourusername/wine-quality-classification.git
+     cd wine-quality-classification
+     ```
+  
+  2. Create a project-specific library
+     ```bash
+     install.packages("renv")
+     renv::init()
+     renv::activate()
+     ```
+    
+  3. Install dependencies
+     ```bash
+     install.packages(c("MASS", "pROC", "caret", "ROCR", "rpart", "rpart.plot", "randomForest", "gbm", "nnet", "class", "e1071"))
+     ```
 
 ## Usage
 
-Execute main script
-```bash
-Rscript wine_quality_models.R
-
+Execute the main script:
+  ```bash
+  Rscript Wine_Quality.Rmd
+  ```
 
 ## Project Structure
 
 wine-quality-classification/
-├── wine_quality.Rmd      # Single script containing all models + evaluation
-├── winequality-red.csv        # Dataset (red wine)
-├── winequality-white.csv      # Dataset (white wine)
+├── wine_quality.Rmd
+├── winequality-red.csv
+├── winequality-white.csv
 ├── slides/
 │   └── Wine_Quality_Classification- Hwan_Cho.pptx
 ├── README.md
 └── LICENSE
+
+## Development
+
+### Reproducibility
+- Set a seed before splitting (e.g., set.seed(123))
+- Fit scaling only on the training set, then apply to test
+
+### (Optional) Future Refactor
+If you want to modularize later:
+- src/preprocessing.R
+- src/models/*.R
+- src/evaluation.R
+
+
+
+
+
+
+
 
