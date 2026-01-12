@@ -94,6 +94,26 @@ If you want to modularize later:
 - src/models/*.R
 - src/evaluation.R
 
+## Contributions
+
+To contribute:
+1. Fork the repository
+2. Create a feature branch (git checkout -b feature/YourFeature)
+3. Commit your changes (git commit -m "Add YourFeature")
+4. Push to the branch (git push origin feature/YourFeature)
+5. Open a Pull Request
+
+## License
+This project is licensed under the **MIT License**.  
+
+## Acknowledgments
+
+- UCI Machine Learning Repository for the Wine Quality datasets
+- caret package for model training, cross-validation, and evaluation workflows
+- randomForest, gbm, e1071, nnet for machine learning implementations
+- ROCR and pROC for ROC curve and AUC analysis
+
+
 
 
 
