@@ -1,7 +1,7 @@
 # Wine Quality Classification
 A machine learning classification project that predicts **wine quality (low vs high)** from physicochemical measurements, compares multiple models (Logistic Regression, Tree, Random Forest, Boosting, Neural Net, KNN, SVM), and evaluates performance using **Accuracy, F1 Score, and AUC**.
 
-> Slides included: **Wine Quality Classification – Hwan Cho** :contentReference[oaicite:0]{index=0}
+> Slides included: **Wine Quality Classification – Hwan Cho** 
 
 ---
 
