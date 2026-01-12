@@ -9,16 +9,16 @@ A machine learning classification project that predicts **wine quality (low vs h
 
 ### Dataset & Problem Setup
 - Uses the **UCI Wine Quality** datasets (red + white)
-- Combines both datasets and adds **`wine_type`** dummy variable (0 = white, 1 = red) :contentReference[oaicite:1]{index=1}  
+- Combines both datasets and adds **`wine_type`** dummy variable (0 = white, 1 = red)
 - Converts original quality score into a **binary target**:
   - **Low quality:** 0–5  
   - **High quality:** 6–10 
 - Train/test split: **70% train / 30% test**
-- Metrics: **Accuracy, F1 Score, AUC** (accounts for baseline/no-information rate) :contentReference[oaicite:3]{index=3}
+- Metrics: **Accuracy, F1 Score, AUC** (accounts for baseline/no-information rate) 
 
 ### Feature Engineering & Selection
-- **Stepwise AIC** feature selection: removed **`chlorides`** (lower AIC) :contentReference[oaicite:4]{index=4}
-- **Scaling applied only when needed** (e.g., KNN, SVM, Neural Networks, Logistic Regression) :contentReference[oaicite:5]{index=5}
+- **Stepwise AIC** feature selection: removed **`chlorides`** (lower AIC) 
+- **Scaling applied only when needed** (e.g., KNN, SVM, Neural Networks, Logistic Regression) 
 
 ### Models Implemented
 - Logistic Regression (baseline)
@@ -27,7 +27,7 @@ A machine learning classification project that predicts **wine quality (low vs h
 - Gradient Boosting (gbm with tuned depth/trees/shrinkage)
 - Neural Network (nnet with tuned size/decay)
 - KNN (tuned k, odd grid search)
-- SVM (radial kernel; tuned cost & gamma/sigma; compared vs linear) :contentReference[oaicite:6]{index=6}
+- SVM (radial kernel; tuned cost & gamma/sigma; compared vs linear)
 
 ### Evaluation & Visualization
 - Confusion matrices for each model
@@ -38,9 +38,9 @@ A machine learning classification project that predicts **wine quality (low vs h
 - **Random Forest selected as the best overall model** based on:
   - Highest accuracy
   - Strong ROC/AUC performance
-  - Practical computational performance :contentReference[oaicite:7]{index=7}
-- Interpretable economic takeaway: **wine quality can be predicted from measurable inputs**, helping producers optimize controllable factors :contentReference[oaicite:8]{index=8}  
-- Example “top variables” highlighted in the slides include **Alcohol, Volatile Acidity, Density** :contentReference[oaicite:9]{index=9}
+  - Practical computational performance 
+- Interpretable economic takeaway: **wine quality can be predicted from measurable inputs**, helping producers optimize controllable factors 
+- Example “top variables” highlighted in the slides include **Alcohol, Volatile Acidity, Density** 
 
 ---
 
@@ -72,16 +72,16 @@ Execute the main script:
   ```
 
 ## Project Structure
-
-wine-quality-classification/
-├── wine_quality.Rmd
-├── winequality-red.csv
-├── winequality-white.csv
-├── slides/
-│   └── Wine_Quality_Classification- Hwan_Cho.pptx
-├── README.md
-└── LICENSE
-
+  ```bash
+  wine-quality-classification/
+  ├── wine_quality.Rmd
+  ├── winequality-red.csv
+  ├── winequality-white.csv
+  ├── slides/
+  │   └── Wine_Quality_Classification- Hwan_Cho.pptx
+  ├── README.md
+  └── LICENSE
+  ```
 ## Development
 
 ### Reproducibility
